@@ -6,10 +6,13 @@
 // arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 
 // Your code:
-export const arrayOfMultiples = (num, length) => {
-    // ... write code ...
+ const arrayOfMultiples = (num, length) => {
+   const arr = [];
+   for (let i = 1; i <= length; i++) {
+     arr.push(num * i);
+   }
+   console.log(arr);
 };
-
 // 2 =================================
 // Change direction of array
 // TIP: Check if there is function which can help you https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -19,8 +22,9 @@ export const arrayOfMultiples = (num, length) => {
 // changeDirection([1, 2]) ➞ [2, 1]
 
 // Your code:
-export const changeDirection = (array) => {
-// ... write code ...
+ const changeDirection = (array) => {
+  array.reverse();
+  console.log(array);
 };
 
 // 3 =================================
@@ -30,6 +34,10 @@ export const changeDirection = (array) => {
 // biggerArray([1,2,3], [2,3,4]) ➞ { array: [2,3,4], sum: 9 }
 
 // Your code:
-export const biggerArray = (array1, array2) => {
-// ... write code ...
+ const biggerArray = (array1, array2) => {
+  if (array1.reduce((a, b) => a + b, 0) > array2.reduce((a, b) => a + b, 0) ){
+    console.log("{ array: " + array1 + ", sum: " + array1.reduce((a, b) => a + b, 0)+"}"); 
+  }else if (array1.reduce((a, b) => a + b, 0) < array2.reduce((a, b) => a + b, 0)){
+    console.log("{ array: " + array2 + ", sum: " + array2.reduce((a, b) => a + b, 0)+"}"); 
+}
 };
