@@ -9,8 +9,9 @@
 // volumeOfBox({ width: 2, length: 3, height: 5 }) ➞ 30
 
 // Your code:
-export const volumeOfBox = (obj) => {
-
+obj = { width: 2, length: 5, height: 1 };
+ const volumeOfBox = (obj) => {
+    console.log(obj.width * obj.length * obj.height);
 };
   
 // 2 ----
@@ -19,9 +20,8 @@ export const volumeOfBox = (obj) => {
 // personObject("Obi-wan", "Kenobi", "40") ➞ { firstname: "Obi-wan", lastname: "Kenobi", age: 40, yearOfBirth: 1981 }
 
 // Your code:
-export const personObject = (firstname, lastname, age) => {
-
-
+ const personObject = (firstname, lastname, age) => {
+  console.log({firstname: firstname, lastname: lastname, age: age, yearOfBirth: 1981});
 };
 
 // 3 ----
@@ -34,8 +34,13 @@ export const personObject = (firstname, lastname, age) => {
 // ]) ➞ 65700
 
 //Your code:
-export const getBudgets = (persons) => {
-
+ const persons = [
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+];
+ const getBudgets = (persons) => {
+  console.log(persons.reduce((a, b) => a + b.budget, 0));
 };
 
 // 4 ----
@@ -45,7 +50,7 @@ export const getBudgets = (persons) => {
 // sortVehiclesByPrice(vehicles) ➞ [{name: "T-47 Airspeeder", price :5}, {name: "AT-AT", price :20}, {name: "Executor Star Dreadnought", price: 999}]
 
 // Your code:
-export const sortVehiclesByPrice = (vehicles) => {
-  
-
+const vehicles = [{name: "Executor Star Dreadnought", price: 999}, {name: "T-47 Airspeeder", price: 5}, {name: "AT-AT", price : 20}];
+ const sortVehiclesByPrice = (vehicles) => {
+  console.log(vehicles.sort((a, b) => a.price - b.price));
 };
