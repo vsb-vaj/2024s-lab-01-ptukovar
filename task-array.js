@@ -33,12 +33,12 @@ for (let i = 0; i < length; i = i + 1) {
 
 // e) Function which will print to console the largest number (You can check Math functions)
  const printLargestItem = (numbers) => {
-  Math.max(numbers);
-};
+  console.log(Math.max(...numbers));
+ };
 
 // f) Function which will print to console the smallest number (You can check Math functions)
  const printSmallestItem = (numbers) => {
-  Math.min(numbers);
+  console.log(Math.min(...numbers));
 };
 
 // g) Function which will print to console the sum of all numbers in array (You can check reduce function)
@@ -52,33 +52,33 @@ for (let i = 0; i < length; i = i + 1) {
 
 // h) Function which will print to console the difference between the largest and the smallest number (You can check Math functions)
  const printSALDifference = (numbers) => {
-  console.log(Math.max-Math.min);
+  console.log(Math.max(...numbers)-Math.min(...numbers));
 };
 
 // i) Function which will print to console the average of all numbers (You can check reduce function)
  const printAverage = (numbers) => {
-  
+  const sum = numbers.reduce((a, b) => a + b, 0);
+  console.log(sum / numbers.length);
 };
 
 // j) Function which will print to console the index of largest number (You can check Math functions)
  const printLargestsIndex = (numbers) => {
-  // Your code:
-
-
+  console.log(numbers.indexOf(Math.max(...numbers)));
 };
 
 // k) Function which will print to console the even numbers (not the array of even numbers),
 // if array doesn't contain any even number, show text "Even number isn't in array"
  const printEvenNums = (numbers) => {
-  // Your code:
-
-
+  for (item of numbers){
+    if(item % 2 === 0){
+      console.log(item);
+    }
+  }
 };
 
 // l) Function which will multiple by 2 every number in array and print the array to console
 // Example: printNumsMultipliedBy2([1,2,3]) -> [2,4,6]
- const printNumsMultipliedBy2 = (numbers) => {
-  // Your code:
-
-
+const printNumsMultipliedBy2 = (numbers) => {
+  const multipliedArray = numbers.map(num => num * 2);
+  console.log(multipliedArray);
 };
