@@ -13,10 +13,9 @@
     for(let j=0; j<=i; j++){
       str += '*';
     }
-    console.log(str);
   }
 };
-
+drawTriangle();
 // 2#  ========== BONUS =======================
 // Write function which will (with cycles) display this (keep in mind that there is no space after the last char):
 // * * * * * * * * * *
@@ -33,7 +32,17 @@
 
 // Your code:
  const drawJavascriptWord = (word = "javascript") => {
-    
+  for (let i = 0; i < word.length; i++) {
+    let line = "";
+    for (let j = 0; j < word.length; j++) {
+        if (j >= word.length - i - 1) {
+            line += word[j];
+        } else {
+            line += "*";
+        }
+    }
+    console.log(line);
+  }
 };
 drawJavascriptWord();
 
@@ -52,6 +61,15 @@ drawJavascriptWord();
 //   ];
 
 // Your code:
+const vehicles = [
+     { name: "Executor Star Dreadnought", measuredSpeeds: [555, 545, 577, 600] },
+     { name: "T-47 Airspeeder", measuredSpeeds: [300, 311, 299, 350] },
+     { name: "AT-AT", measuredSpeeds: [20, 21, 20, 19] },
+   ];
  const getVehiclesAndTopSpeed = (vehicles) => {
-  
+  vehicles.forEach((vehicle) => {
+    vehicle.topSpeed = Math.max(...vehicle.measuredSpeeds);
+  });
+  console.log(vehicles);
 };
+getVehiclesAndTopSpeed(vehicles)

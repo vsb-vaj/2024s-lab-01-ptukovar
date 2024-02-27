@@ -13,6 +13,6 @@ Some functions require you to "return" the value, some of them you can just cons
 
 
 ## BONUS
-You can do all the tasks in the file task-bonus.js to get 1 bonus point ✅
+You can do all the tasks in the file task-bonus.js to get 1 bonus point
 
 
