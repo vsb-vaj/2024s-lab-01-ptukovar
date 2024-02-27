@@ -44,7 +44,6 @@ drawTriangle();
     console.log(line);
   }
 };
-drawJavascriptWord();
 
 // 3#  ========== BONUS =======================
 // Create function that takes array of vehicles with measured top speeds. Return array of vehicle with top speed.
@@ -61,15 +60,20 @@ drawJavascriptWord();
 //   ];
 
 // Your code:
-const vehicles = [
+let vehicles = [
      { name: "Executor Star Dreadnought", measuredSpeeds: [555, 545, 577, 600] },
      { name: "T-47 Airspeeder", measuredSpeeds: [300, 311, 299, 350] },
      { name: "AT-AT", measuredSpeeds: [20, 21, 20, 19] },
    ];
  const getVehiclesAndTopSpeed = (vehicles) => {
+  let result = {
+    name: "",
+    topSpeed: 0,
+  };
   vehicles.forEach((vehicle) => {
-    vehicle.topSpeed = Math.max(...vehicle.measuredSpeeds);
+    result.name = vehicle.name;
+    result.topSpeed = Math.max(...vehicle.measuredSpeeds);
+    console.log(result);
   });
-  console.log(vehicles);
 };
 getVehiclesAndTopSpeed(vehicles)
